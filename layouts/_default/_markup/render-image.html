@@ -1,10 +1,11 @@
 <p class="markdown-image">
   {{ if .Title }}
   <figure>
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
-    <figcaption>{{ .Title }}</figcaption>
+    <img style="display:block;text-align:center;margin:auto" src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+    <figcaption style="display:block;text-align:center;margin:auto"><i>{{ .Text | safeHTML }}</i></figcaption>
   </figure>
 {{ else }}
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+  <img style="display:block;text-align:center;margin:auto" src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+  <figcaption style="display:block;text-align:center;margin:auto"><i>{{ .Text | safeHTML }}</i></figcaption>
 {{ end }}
 </p>
